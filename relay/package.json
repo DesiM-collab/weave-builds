@@ -1,0 +1,6 @@
+{
+  "name": "weave-relay",
+  "private": true,
+  "description": "Weave's internet relay: passes encrypted data between your own devices when they are not on the same network.",
+  "scripts": { "deploy": "wrangler deploy" }
+}
