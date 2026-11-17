@@ -14,7 +14,8 @@ const ROOM_PATH = /^\/v1\/room\/([0-9a-f]{64})$/;
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
-    if (url.pathname === "/health") return new Response("ok");
+    // Any web page may ask whether the relay is up (the setup guide's check); nothing else is exposed.
+    if (url.pathname === "/health") return new Response("ok", { headers: { "Access-Control-Allow-Origin": "*" } });
     const m = ROOM_PATH.exec(url.pathname);
     if (!m) return new Response("not found", { status: 404 });
     return env.ROOMS.get(env.ROOMS.idFromName(m[1])).fetch(request);

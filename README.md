@@ -7,6 +7,9 @@ goes directly between your own devices, encrypted.
 This repository holds the finished apps (and the optional relay). The apps update themselves
 from here.
 
+**[Open the step-by-step setup guide →](https://desim-collab.github.io/weave-builds/)**
+It shows only the steps for your devices, tracks your progress, and can check your relay.
+
 ## Download
 
 | Device | Download |
